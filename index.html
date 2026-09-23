@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faisalabad Tutors Network | Verified In-Home &amp; Online Tutoring (Class 1–10 &amp; Matric)</title>
+  <meta name="description" content="Trusted home and online tutors in Faisalabad for Class 1–5, Middle School (6–8), and Matric (9th &amp; 10th) BISE Faisalabad board exam preparation. Book a free diagnostic trial class today.">
+
+  <style>
+    /* ==========================================================================
+       1. CSS RESET & DESIGN TOKENS
+       ========================================================================== */
+    :root {
+      --color-navy: #0b1e36;
+      --color-navy-dark: #071324;
+      --color-terracotta: #bf573f;
+      --color-terracotta-hover: #9e442c;
+      --color-whatsapp: #25d366;
+      --color-whatsapp-hover: #1ebd5a;
+      --color-alert-red: #b91c1c;
+      --color-alert-bg: #fef2f2;
+      --color-slate: #64748b;
+      --color-slate-light: #94a3b8;
+      --color-border: #e2e8f0;
+      --color-card-bg: #ffffff;
+      --color-surface-subtle: #f8fafc;
+
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(11, 30, 54, 0.06), 0 1px 2px rgba(11, 30, 54, 0.04);
+      --shadow-md: 0 4px 12px rgba(11, 30, 54, 0.08), 0 2px 4px rgba(11, 30, 54, 0.04);
+      --shadow-lg: 0 12px 28px rgba(11, 30, 54, 0.12), 0 4px 8px rgba(11, 30, 54, 0.06);
+      --shadow-hover: 0 16px 36px rgba(11, 30, 54, 0.16);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    /* Academic Coordinate Graph Paper Background */
+    body {
+      font-family: var(--font-stack);
+      color: #1e293b;
+      line-height: 1.6;
+      background-color: #f8fafc;
+      background-image: 
+        linear-gradient(rgba(11, 30, 54, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 30, 54, 0.04) 1px, transparent 1px),
+        linear-gradient(rgba(11, 30, 54, 0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 30, 54, 0.09) 1px, transparent 1px);
+      background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+      background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+      padding-bottom: 74px; /* Space for mobile sticky action dock */
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+
+    /* Strict Formatting Enforcements */
+    p.body-text, 
+    .card-body,
+    .bio-text,
+    .faq-answer p,
+    .step-desc {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .btn-center-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 1.25rem;
+    }
+
+    /* Responsive Container Engine */
+    .container {
+      width: 100%;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 820px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1100px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    /* Section Spacing */
+    .section-wrap {
+      padding: 3.5rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      .section-wrap {
+        padding: 5rem 0;
+      }
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.75rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-terracotta);
+      background-color: rgba(191, 87, 63, 0.08);
+      border: 1px solid rgba(191, 87, 63, 0.2);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .section-title {
+        font-size: 2.35rem;
+      }
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--color-slate);
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Universal Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      border: none;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .btn-terracotta {
+      background-color: var(--color-terracotta);
+      color: #ffffff;
+    }
+
+    .btn-terracotta:hover {
+      background-color: var(--color-terracotta-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--color-whatsapp);
+      color: #ffffff;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--color-whatsapp-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline-navy {
+      background-color: transparent;
+      color: var(--color-navy);
+      border: 1.5px solid var(--color-navy);
+    }
+
+    .btn-outline-navy:hover {
+      background-color: var(--color-navy);
+      color: #ffffff;
+    }
+
+    .btn-sm {
+      padding: 0.55rem 1.1rem;
+      font-size: 0.85rem;
+    }
+
+    /* Crisp White Elevation Cards */
+    .white-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .white-card:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    /* ==========================================================================
+       SECTION 1: TOP BAR
+       ========================================================================== */
+    .top-contact-bar {
+      background-color: var(--color-navy-dark);
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      text-align: center;
+      padding: 0.55rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .top-contact-bar strong {
+      color: #f8fafc;
+    }
+
+    .top-contact-bar a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .top-contact-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       SECTION 2: STICKY HEADER
+       ========================================================================== */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0.85rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .brand-crest {
+      width: 40px;
+      height: 40px;
+      background: var(--color-navy);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.25rem;
+      border: 1.5px solid var(--color-terracotta);
+    }
+
+    .brand-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      line-height: 1.15;
+    }
+
+    .brand-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--color-terracotta);
+      letter-spacing: 0.02em;
+    }
+
+    /* ==========================================================================
+       SECTION 3: HERO SECTION (2-COL SPLIT ON DESKTOP)
+       ========================================================================== */
+    .hero-section {
+      padding: 2.75rem 0 3.5rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-layout {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 3rem;
+        align-items: center;
+      }
+    }
+
+    .geo-pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .geo-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.3rem 0.65rem;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-pill);
+      color: var(--color-navy);
+    }
+
+    .geo-pill.primary {
+      background: rgba(11, 30, 54, 0.06);
+      border-color: var(--color-navy);
+      font-weight: 700;
+    }
+
+    .hero-h1 {
+      font-size: 2.05rem;
+      font-weight: 900;
+      color: var(--color-navy);
+      line-height: 1.22;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-h1 {
+        font-size: 2.75rem;
+      }
+    }
+
+    .hero-h1 .highlight-red {
+      color: var(--color-alert-red);
+      text-decoration: underline decoration-thickness-2;
+      text-underline-offset: 4px;
+    }
+
+    .hero-lead {
+      font-size: 1.05rem;
+      color: #334155;
+      margin-bottom: 1.75rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .countdown-card {
+      background: var(--color-alert-bg);
+      border-left: 4px solid var(--color-alert-red);
+      padding: 0.85rem 1.1rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .countdown-icon {
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .countdown-text {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #991b1b;
+      line-height: 1.35;
+    }
+
+    /* Right Column: Hero Action Panel */
+    .hero-action-panel {
+      background: #ffffff;
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .panel-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: var(--color-terracotta);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-pill);
+    }
+
+    .action-panel-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .action-panel-desc {
+      font-size: 0.9rem;
+      color: var(--color-slate);
+      margin-bottom: 1.5rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .benefit-checklist {
+      list-style: none;
+      margin-bottom: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.875rem;
+      color: #1e293b;
+      font-weight: 500;
+    }
+
+    .check-circle {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      background: rgba(37, 211, 102, 0.15);
+      color: #15803d;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 900;
+      margin-top: 1px;
+    }
+
+    /* ==========================================================================
+       SECTION 4: THREE ACADEMIC STAGES (3-COL DESKTOP)
+       ========================================================================== */
+    .stages-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .stages-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .stage-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stage-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-pill);
+      background: rgba(11, 30, 54, 0.08);
+      color: var(--color-navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .stage-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .stage-feature-list {
+      list-style: none;
+      margin: 1.25rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #475569;
+    }
+
+    .stage-feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .stage-feature-list li strong {
+      color: var(--color-navy);
+    }
+
+    /* ==========================================================================
+       SECTION 5: THREE TUITION DELIVERY METHODS (3-COL DESKTOP)
+       ========================================================================== */
+    .modes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .modes-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .mode-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mode-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-pill);
+      background: rgba(191, 87, 63, 0.1);
+      color: var(--color-terracotta);
+      margin-bottom: 0.75rem;
+    }
+
+    .mode-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .mode-list {
+      list-style: none;
+      margin: 1.25rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      font-size: 0.85rem;
+      color: #475569;
+    }
+
+    .mode-list li strong {
+      color: var(--color-navy);
+    }
+
+    /* ==========================================================================
+       SECTION 6: WHY MATRIC STUDENTS LOSE MARKS (3-COL DESKTOP)
+       ========================================================================== */
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .reasons-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .reason-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reason-num {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: rgba(185, 28, 28, 0.08);
+      color: var(--color-alert-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin-bottom: 1.25rem;
+    }
+
+    .reason-card h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ==========================================================================
+       SECTION 7: THE 3-STEP BOARD SUCCESS SYSTEM (3-COL DESKTOP)
+       ========================================================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .step-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #ffffff;
+      background: var(--color-navy);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      align-self: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .step-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ==========================================================================
+       SECTION 8: WHAT HAPPENS IN 60-MIN TRIAL (ZERO-RISK DE-RISKING)
+       ========================================================================== */
+    .trial-box {
+      background: linear-gradient(135deg, var(--color-navy-dark) 0%, var(--color-navy) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (min-width: 1024px) {
+      .trial-box {
+        padding: 3.5rem;
+      }
+    }
+
+    .trial-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .trial-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .trial-col {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .trial-time {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #f59e0b;
+      margin-bottom: 0.5rem;
+    }
+
+    .trial-col h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .trial-col p {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    /* ==========================================================================
+       SECTION 9: VERIFIED FACULTY SHOWCASE (MULTIPLE TEACHERS)
+       ========================================================================== */
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .faculty-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .faculty-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .faculty-header {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* 94x94px circular headshot frame with precision cropping */
+    .faculty-dp-frame {
+      width: 94px;
+      height: 94px;
+      min-width: 94px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--color-terracotta);
+      background-color: #f1f5f9;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faculty-dp-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .faculty-meta {
+      flex: 1;
+    }
+
+    .faculty-name {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      line-height: 1.2;
+    }
+
+    .faculty-role {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--color-terracotta);
+      margin-top: 0.15rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .badge-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .badge-pill {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-pill);
+      background: var(--color-surface-subtle);
+      border: 1px solid var(--color-border);
+      color: var(--color-navy);
+    }
+
+    /* 4-column metric row on desktop, 2x2 on mobile */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem;
+      background: var(--color-surface-subtle);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 0.85rem;
+      margin: 1.25rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .metric-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-val {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--color-navy);
+      line-height: 1.1;
+    }
+
+    .metric-label {
+      font-size: 0.68rem;
+      color: var(--color-slate);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+
+    /* ==========================================================================
+       SECTION 10: INTERACTIVE SMART BOOKING FORM (2-COL DESKTOP)
+       ========================================================================== */
+    .booking-section-wrap {
+      background: #ffffff;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .booking-box {
+      background: var(--color-card-bg);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (min-width: 1024px) {
+      .booking-box {
+        padding: 3rem;
+      }
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .form-col-full {
+        grid-column: span 2;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-navy);
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: #1e293b;
+      background: #ffffff;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-input:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--color-terracotta);
+      box-shadow: 0 0 0 3px rgba(191, 87, 63, 0.15);
+    }
+
+    .form-security-note {
+      font-size: 0.78rem;
+      color: var(--color-slate);
+      text-align: center;
+      margin-top: 0.85rem;
+    }
+
+    /* ==========================================================================
+       SECTION 11: FREQUENTLY ASKED QUESTIONS (ACCORDION)
+       ========================================================================== */
+    .faq-container {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      gap: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    .faq-question:hover {
+      background: var(--color-surface-subtle);
+    }
+
+    .faq-chevron {
+      font-size: 1.25rem;
+      line-height: 1;
+      transition: transform 0.3s ease;
+      color: var(--color-terracotta);
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      background: #ffffff;
+      padding: 0 1.5rem;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 480px;
+      padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.925rem;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       SECTION 12: FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: var(--color-navy-dark);
+      color: #94a3b8;
+      padding: 3.5rem 0 2rem 0;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+    }
+
+    .footer-col h5 {
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.78rem;
+    }
+
+    /* ==========================================================================
+       SECTION 13: SMART MOBILE ACTION DOCK (< 1024PX ONLY)
+       ========================================================================== */
+    .mobile-sticky-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: rgba(11, 30, 54, 0.98);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.65rem 1rem;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-sticky-dock {
+        display: none !important;
+      }
+    }
+
+    .dock-btn {
+      flex: 1;
+      padding: 0.75rem 0.5rem;
+      font-size: 0.85rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SECTION 1: TOP BAR
+       ========================================================================== -->
+  <aside class="top-contact-bar" role="complementary" aria-label="Official Contact Information">
+    <span>📞 Call / WhatsApp: <a href="https://wa.me/923300737350" target="_blank">+92 330 0737350</a> &nbsp;|&nbsp; <strong>Trusted In-Home &amp; Online Tutors in Faisalabad</strong></span>
+  </aside>
+
+  <!-- ==========================================================================
+       SECTION 2: STICKY HEADER
+       ========================================================================== -->
+  <header class="sticky-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="brand-wrap" aria-label="Faisalabad Tutors Network Home">
+        <div class="brand-crest">F</div>
+        <div class="brand-info">
+          <span class="brand-name">FAISALABAD TUTORS</span>
+          <span class="brand-badge">BISE Faisalabad &amp; Punjab Board Specialists</span>
+        </div>
+      </a>
+      
+      <div class="header-actions">
+        <a href="#book-now" class="btn btn-terracotta btn-sm">Book Free Trial</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 3: HERO SECTION (2-COL SPLIT ON DESKTOP)
+       ========================================================================== -->
+  <main>
+    <section class="section-wrap hero-section">
+      <div class="container hero-layout">
+        
+        <!-- Left Hero Column -->
+        <div class="hero-content">
+          <div class="geo-pill-wrap">
+            <span class="geo-pill primary">📍 In-Home, Studio &amp; Online</span>
+            <span class="geo-pill">Peoples Colony</span>
+            <span class="geo-pill">Madina Town</span>
+            <span class="geo-pill">Kohinoor / D Ground</span>
+            <span class="geo-pill">Canal Road</span>
+            <span class="geo-pill">Faisalabad Hubs</span>
+          </div>
+
+          <h1 class="hero-h1">
+            Preparing for Board Exams or Struggling in School? Upgrade Your Child's Grades with <span class="highlight-red">Faisalabad's Top Verified</span> Home &amp; Online Tutors.
+          </h1>
+
+          <div class="countdown-card">
+            <span class="countdown-icon">⚠️</span>
+            <div class="countdown-text">
+              <strong>Pre-Board Send-Up &amp; Annual Exam Alert:</strong> Limited home visit slots remaining across Faisalabad for 9th &amp; 10th board sprints and Class 1–8 homework mentorship.
+            </div>
+          </div>
+
+          <p class="hero-lead">
+            Whether your child needs attentive, patient female tutoring for primary school homework or rigorous, past-paper driven coaching for BISE Faisalabad 9th and 10th Matric exams, we dispatch background-verified subject specialists straight to your doorstep across Faisalabad.
+          </p>
+        </div>
+
+        <!-- Right Hero Column: Action Panel -->
+        <div class="hero-panel-wrap">
+          <div class="hero-action-panel">
+            <span class="panel-badge">100% Free • Zero Obligation</span>
+            <h2 class="action-panel-title">Book a Free Diagnostic Trial</h2>
+            <p class="action-panel-desc">
+              Experience our teacher's methodology firsthand. We evaluate your child's syllabus gaps and prepare a personalized grade-enhancement roadmap before you pay a single rupee.
+            </p>
+
+            <ul class="benefit-checklist">
+              <li class="benefit-item">
+                <span class="check-circle">✓</span>
+                <span><strong>Verified Male &amp; Female Tutors:</strong> Rigorous CNIC and degree vetting.</span>
+              </li>
+              <li class="benefit-item">
+                <span class="check-circle">✓</span>
+                <span><strong>BISE Faisalabad Board Alignment:</strong> Master 5-year past papers &amp; presentation.</span>
+              </li>
+              <li class="benefit-item">
+                <span class="check-circle">✓</span>
+                <span><strong>Zero Commute Stress:</strong> Tutor visits your residence on your schedule.</span>
+              </li>
+            </ul>
+
+            <div class="btn-center-wrap" style="flex-direction: column; gap: 0.75rem;">
+              <a href="#book-now" class="btn btn-terracotta" style="width: 100%;">
+                Request In-Home Free Trial
+              </a>
+              <a href="javascript:void(0)" onclick="openWhatsAppChat('Assalam o Alaikum, I would like to book a Free Diagnostic Trial Class for my child in Faisalabad.')" class="btn btn-whatsapp" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                Chat on WhatsApp Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: THREE ACADEMIC STAGES (TARGETED SUPPORT)
+         ========================================================================== -->
+    <section class="section-wrap" style="background: rgba(255,255,255,0.7); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curriculum Coverage</span>
+          <h2 class="section-title">Specialized Tutoring Built for Every Educational Tier</h2>
+          <p class="section-subtitle">
+            From establishing foundational discipline in elementary classes to high-stakes Matriculation score maximization, our tutors apply proven stage-specific methodologies.
+          </p>
+        </div>
+
+        <div class="stages-grid">
+          <!-- Stage 1 -->
+          <article class="white-card stage-card">
+            <div>
+              <span class="stage-badge">Grades 1–5</span>
+              <h3 class="stage-title">Primary School Mentorship</h3>
+              <p class="card-body">
+                Relieve working parents from daily academic pressure. Experienced female home tutors instill study discipline, supervise daily homework across all subjects (English, Urdu, Maths, Science, Islamiat), and correct basic handwriting and reading phonics.
+              </p>
+              <ul class="stage-feature-list">
+                <li><strong>Subjects:</strong> English, Urdu, Maths, Gen Science, Islamiat</li>
+                <li><strong>Discipline:</strong> Complete daily school diary without parental stress</li>
+                <li><strong>Safety:</strong> Caring, background-cleared female educators</li>
+              </ul>
+            </div>
+            <div class="btn-center-wrap">
+              <a href="#book-now" class="btn btn-terracotta btn-sm">Book Primary Tutor</a>
+            </div>
+          </article>
+
+          <!-- Stage 2 -->
+          <article class="white-card stage-card">
+            <div>
+              <span class="stage-badge">Grades 6–8</span>
+              <h3 class="stage-title">Middle School Foundation</h3>
+              <p class="card-body">
+                The critical transition where science splits into specialized domains and mathematics introduces abstract algebra. We replace rote memorization with conceptual problem-solving, making students fully board-ready before entering 9th class.
+              </p>
+              <ul class="stage-feature-list">
+                <li><strong>Focus:</strong> Science concept mastery, algebra, English grammar</li>
+                <li><strong>Transition:</strong> Eliminates the academic shock of 9th class syllabi</li>
+                <li><strong>Testing:</strong> Weekly chapter revisions and assessment sheets</li>
+              </ul>
+            </div>
+            <div class="btn-center-wrap">
+              <a href="#book-now" class="btn btn-outline-navy btn-sm">Book Middle Tutor</a>
+            </div>
+          </article>
+
+          <!-- Stage 3 -->
+          <article class="white-card stage-card">
+            <div>
+              <span class="stage-badge">Class 9 &amp; 10 (SSC-I &amp; II)</span>
+              <h3 class="stage-title">Matric Board Exam Preparation</h3>
+              <p class="card-body">
+                High-stakes preparation tailored for BISE Faisalabad and Punjab Boards. Focuses on securing 90%+ marks necessary for admission into GC University, Punjab College, KIPS, Aspire, and Superior colleges via rigorous 5-year past paper drillings.
+              </p>
+              <ul class="stage-feature-list">
+                <li><strong>Subjects:</strong> Maths, Physics, Chemistry, Biology, Comp Sci</li>
+                <li><strong>Board Mastery:</strong> Cut-marker headings, diagrams, and numericals</li>
+                <li><strong>Exam Sprints:</strong> Pre-board send-up and annual exam simulations</li>
+              </ul>
+            </div>
+            <div class="btn-center-wrap">
+              <a href="#book-now" class="btn btn-terracotta btn-sm">Book Matric Specialist</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: THREE TUITION DELIVERY METHODS
+         ========================================================================== -->
+    <section class="section-wrap">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Flexible Learning Modes</span>
+          <h2 class="section-title">Three Convenient Ways to Learn Across Faisalabad</h2>
+          <p class="section-subtitle">
+            Choose the setting that best matches your family's routine, neighborhood convenience, and personal learning preferences.
+          </p>
+        </div>
+
+        <div class="modes-grid">
+          <!-- Mode 1 -->
+          <article class="white-card mode-card">
+            <div>
+              <span class="mode-badge">Premier Choice</span>
+              <h3 class="mode-title">1-on-1 In-Home Tutoring</h3>
+              <p class="card-body">
+                Our verified male or female tutor travels directly to your house in Peoples Colony, Madina Town, Kohinoor, Canal Road, or surrounding sectors. Save travel time and monitor your child's progress comfortably from home.
+              </p>
+              <ul class="mode-list">
+                <li><strong>Coverage:</strong> All major residential colonies in Faisalabad</li>
+                <li><strong>Format:</strong> 1-on-1 personalized attention</li>
+                <li><strong>Safety:</strong> Fully verified CNIC and academic credentials</li>
+              </ul>
+            </div>
+            <div class="btn-center-wrap">
+              <a href="#book-now" class="btn btn-terracotta btn-sm">Request In-Home Tutor</a>
+            </div>
+          </article>
+
+          <!-- Mode 2 -->
+          <article class="white-card mode-card">
+            <div>
+              <span class="mode-badge">Focused Setting</span>
+              <h3 class="mode-title">Tutor's Home Studio Setup</h3>
+              <p class="card-body">
+                For parents seeking an academic sanctuary free from domestic household distractions. Students attend dedicated 1-on-1 or small-batch coaching at our senior instructor's home setup in their local neighborhood.
+              </p>
+              <ul class="mode-list">
+                <li><strong>Environment:</strong> Quiet, distraction-free study room</li>
+                <li><strong>Access:</strong> Full library of board past papers and guides</li>
+                <li><strong>Cost:</strong> Economical pricing with premium attention</li>
+              </ul>
+            </div>
+            <div class="btn-center-wrap">
+              <a href="#book-now" class="btn btn-outline-navy btn-sm">Explore Studio Option</a>
+            </div>
+          </article>
+
+          <!-- Mode 3 -->
+          <article class="white-card mode-card">
+            <div>
+              <span class="mode-badge">Digital Precision</span>
+              <h3 class="mode-title">1-on-1 Live Online Classes</h3>
+              <p class="card-body">
+                Live interactive lessons via Zoom or Google Meet with digital graphics drawing tablets. Every derivation, formula, and labeled diagram is mirrored live on screen. Full session recordings and PDF summary notes provided.
+              </p>
+              <ul class="mode-list">
+                <li><strong>Technology:</strong> High-definition graphics tablet screen-sharing</li>
+                <li><strong>Resources:</strong> Recorded lecture replays &amp; digital notes</li>
+                <li><strong>Reach:</strong> Faisalabad, Punjab-wide &amp; overseas families</li>
+              </ul>
+            </div>
+            <div class="btn-center-wrap">
+              <a href="#book-now" class="btn btn-outline-navy btn-sm">Try Online Class</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: WHY MATRIC STUDENTS LOSE MARKS IN BOARD EXAMS
+         ========================================================================== -->
+    <section class="section-wrap" style="background: rgba(255,255,255,0.7); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Board Examiner Insights</span>
+          <h2 class="section-title">Why Hardworking Matric Students Lose Marks in BISE Exams</h2>
+          <p class="section-subtitle">
+            Students often know the textbook concepts, yet miss the 90%+ bracket. Here are the three structural flaws that board examiners penalize every year.
+          </p>
+        </div>
+
+        <div class="reasons-grid">
+          <div class="white-card reason-card">
+            <div class="reason-num">01</div>
+            <h3>Poor Paper Presentation &amp; Heading Structure</h3>
+            <p class="card-body">
+              BISE Faisalabad examiners evaluate hundreds of answer sheets daily. When students write dense paragraphs without 605/604 cut-marker headings, sub-points, and margin lines, examiners skip reading and award mediocre 2-to-3 marks instead of full 5 marks.
+            </p>
+          </div>
+
+          <div class="white-card reason-card">
+            <div class="reason-num">02</div>
+            <h3>Numericals &amp; Diagram Errors in Science</h3>
+            <p class="card-body">
+              In Physics and Chemistry, losing formula identification, unit conversions, and step-by-step working costs 10 to 15 marks. In Biology, hand-sketched diagrams lacking neat labels and pencil borders forfeit essential method marks automatically.
+            </p>
+          </div>
+
+          <div class="white-card reason-card">
+            <div class="reason-num">03</div>
+            <h3>Rote Learning Without Past-Paper Time Drills</h3>
+            <p class="card-body">
+              Cramming "Khulasa" guides without timing 5-year past paper questions leads to catastrophic exam hall panic. Students spend 40 minutes on the first long question, leaving the final 8-mark question rushed or completely unattempted.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: THE 3-STEP BOARD SUCCESS SYSTEM
+         ========================================================================== -->
+    <section class="section-wrap">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tested Methodology</span>
+          <h2 class="section-title">The 3-Step Board Success System</h2>
+          <p class="section-subtitle">
+            Our systematic framework transforms borderline grades into top-tier board scores in 8 to 12 weeks of structured academic mentorship.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="white-card step-card">
+            <span class="step-pill">STEP 01</span>
+            <h3>Syllabus Diagnostic &amp; Weak Chapter Audit</h3>
+            <p class="step-desc">
+              We conduct an initial assessment across all key book chapters to identify specific gaps—whether it is algebraic factorization in Maths, chemical equation balancing, or English active/passive translation rules.
+            </p>
+          </div>
+
+          <div class="white-card step-card">
+            <span class="step-pill">STEP 02</span>
+            <h3>Chapter-Wise Past Paper &amp; Model Paper Sprints</h3>
+            <p class="step-desc">
+              We systematically drill the last 5 years of BISE Faisalabad Board papers topic-by-topic. Students repeatedly solve both Group-I and Group-II board questions until answer structures become second nature.
+            </p>
+          </div>
+
+          <div class="white-card step-card">
+            <span class="step-pill">STEP 03</span>
+            <h3>Timed Board Simulation &amp; Paper Presentation</h3>
+            <p class="step-desc">
+              Every fortnight, students sit for timed full-length mock examinations on authentic board-style ruled sheets. Tutors mark papers using official BISE checking standards, training students in marker presentation and pacing.
+            </p>
+          </div>
+        </div>
+
+        <div class="btn-center-wrap">
+          <a href="#book-now" class="btn btn-terracotta">Claim Your Child's Free Diagnostic Audit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: WHAT HAPPENS IN 60-MIN TRIAL (ZERO-RISK DE-RISKING)
+         ========================================================================== -->
+    <section class="section-wrap">
+      <div class="container">
+        <div class="trial-box">
+          <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+            <span style="color: #f59e0b; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;">
+              Zero-Risk Parent Assurance
+            </span>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0.5rem 0 1rem 0; line-height: 1.25;">
+              What Truly Happens in Your Free 60-Minute Trial Class
+            </h2>
+            <p style="color: #cbd5e1; font-size: 0.95rem; text-align: justify; text-justify: inter-word;">
+              We eliminate all uncertainty. Experience our instructor's teaching methodology, student rapport, and personalized assessment plan before making any financial commitment.
+            </p>
+          </div>
+
+          <div class="trial-grid">
+            <div class="trial-col">
+              <div class="trial-time">40 Mins</div>
+              <h4>Student Skill Diagnostic</h4>
+              <p>
+                The tutor conducts an encouraging, low-stress evaluation on challenging textbook concepts and past questions to pinpoint foundational weaknesses and exam anxieties.
+              </p>
+            </div>
+
+            <div class="trial-col">
+              <div class="trial-time">15 Mins</div>
+              <h4>Honest Parent Consultation</h4>
+              <p>
+                The tutor meets with parents to discuss exact conceptual gaps, realistic target grade trajectories for board exams, and recommended weekly contact hours.
+              </p>
+            </div>
+
+            <div class="trial-col">
+              <div class="trial-time">05 Mins</div>
+              <h4>Custom Study Roadmap</h4>
+              <p>
+                You receive a clear, week-by-week syllabus revision schedule tailored to your child's upcoming school send-ups or board exam dates with zero obligation to continue.
+              </p>
+            </div>
+          </div>
+
+          <div class="btn-center-wrap">
+            <a href="#book-now" class="btn btn-whatsapp" style="padding: 0.95rem 2.2rem; font-size: 1rem;">
+              Book Your 60-Min In-Home Diagnostic Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9: MEET OUR VERIFIED SPECIALIST FACULTY
+         ========================================================================== -->
+    <section class="section-wrap" style="background: rgba(255,255,255,0.7); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Vetted Educators</span>
+          <h2 class="section-title">Meet Our Senior Specialist Faculty</h2>
+          <p class="section-subtitle">
+            Every tutor in our network is thoroughly screened, holding relevant Master's degrees, demonstrated board exam track records, and verified family references.
+          </p>
+        </div>
+
+        <div class="faculty-grid">
+          
+          <!-- Faculty Card 1 -->
+          <article class="white-card faculty-card">
+            <div>
+              <div class="faculty-header">
+                <div class="faculty-dp-frame">
+                  <svg class="faculty-dp-img" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ustada Sadia Noreen portrait">
+                    <rect width="94" height="94" fill="#071324"/>
+                    <circle cx="47" cy="38" r="18" fill="#fed7aa"/>
+                    <path d="M20 84C20 66 32 60 47 60C62 60 74 66 74 84" fill="#fed7aa"/>
+                    <circle cx="47" cy="35" r="13" fill="#fde68a"/>
+                    <path d="M30 25C30 25 47 15 64 25C64 25 60 44 47 44C34 44 30 25 30 25Z" fill="#1e3a8a"/>
+                  </svg>
+                </div>
+                <div class="faculty-meta">
+                  <h3 class="faculty-name">Ustada Sadia Noreen</h3>
+                  <div class="faculty-role">Primary &amp; Middle Specialist</div>
+                  <div class="badge-cloud">
+                    <span class="badge-pill">M.Sc / B.Ed</span>
+                    <span class="badge-pill">Class 1–8 All Subjects</span>
+                    <span class="badge-pill">In-Home Only</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4-Column Metric Grid on Desktop, 2x2 on Mobile -->
+              <div class="metric-grid">
+                <div class="metric-item">
+                  <div class="metric-val">8+ Yrs</div>
+                  <div class="metric-label">Experience</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">320+</div>
+                  <div class="metric-label">Students</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">Madina Town</div>
+                  <div class="metric-label">Location</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">98%</div>
+                  <div class="metric-label">Retention</div>
+                </div>
+              </div>
+
+              <p class="bio-text">
+                Highly regarded by mothers across Madina Town and Peoples Colony for her gentle, disciplined approach with primary and middle school students. Excels in cursive English handwriting, basic mathematics confidence, and daily school diary compliance.
+              </p>
+            </div>
+
+            <div class="btn-center-wrap">
+              <button type="button" onclick="selectFaculty('Ustada Sadia Noreen', 'Primary / Middle (Class 1–8)', 'In-Home Visit (Female Tutor)')" class="btn btn-terracotta btn-sm">
+                Book Trial With Ustada Sadia
+              </button>
+            </div>
+          </article>
+
+          <!-- Faculty Card 2 -->
+          <article class="white-card faculty-card">
+            <div>
+              <div class="faculty-header">
+                <div class="faculty-dp-frame">
+                  <svg class="faculty-dp-img" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Sir Muhammad Rizwan portrait">
+                    <rect width="94" height="94" fill="#0b1e36"/>
+                    <circle cx="47" cy="38" r="18" fill="#e2e8f0"/>
+                    <path d="M20 84C20 66 32 60 47 60C62 60 74 66 74 84" fill="#e2e8f0"/>
+                    <circle cx="47" cy="35" r="13" fill="#cbd5e1"/>
+                    <rect x="36" y="32" width="22" height="4" rx="2" fill="#0b1e36"/>
+                  </svg>
+                </div>
+                <div class="faculty-meta">
+                  <h3 class="faculty-name">Sir Muhammad Rizwan</h3>
+                  <div class="faculty-role">Senior Matric Mathematics Mentor</div>
+                  <div class="badge-cloud">
+                    <span class="badge-pill">M.Sc Mathematics</span>
+                    <span class="badge-pill">9th &amp; 10th Board</span>
+                    <span class="badge-pill">In-Home &amp; Studio</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4-Column Metric Grid on Desktop, 2x2 on Mobile -->
+              <div class="metric-grid">
+                <div class="metric-item">
+                  <div class="metric-val">12+ Yrs</div>
+                  <div class="metric-label">Experience</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">650+</div>
+                  <div class="metric-label">Students</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">BISE FSD</div>
+                  <div class="metric-label">Board</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">74/75</div>
+                  <div class="metric-label">Avg Maths</div>
+                </div>
+              </div>
+
+              <p class="bio-text">
+                Matric mathematics specialist with over a decade preparing students for BISE Faisalabad Board exams. Known for transforming students scoring 25/75 in school send-ups into 70+ scorers through systematic theorem derivations, matrix algebra drills, and past paper mastery.
+              </p>
+            </div>
+
+            <div class="btn-center-wrap">
+              <button type="button" onclick="selectFaculty('Sir Muhammad Rizwan', '9th Class / SSC-I', 'In-Home Visit (Male Tutor)')" class="btn btn-terracotta btn-sm">
+                Book Trial With Sir Rizwan
+              </button>
+            </div>
+          </article>
+
+          <!-- Faculty Card 3 -->
+          <article class="white-card faculty-card">
+            <div>
+              <div class="faculty-header">
+                <div class="faculty-dp-frame">
+                  <svg class="faculty-dp-img" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Engr. Hamza Farooq portrait">
+                    <rect width="94" height="94" fill="#1e293b"/>
+                    <circle cx="47" cy="38" r="18" fill="#f8fafc"/>
+                    <path d="M20 84C20 66 32 60 47 60C62 60 74 66 74 84" fill="#f8fafc"/>
+                    <circle cx="47" cy="35" r="13" fill="#cbd5e1"/>
+                    <path d="M38 33C38 33 42 38 47 38C52 38 56 33 56 33" stroke="#0b1e36" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="faculty-meta">
+                  <h3 class="faculty-name">Engr. Hamza Farooq</h3>
+                  <div class="faculty-role">Physics &amp; Chemistry Fellow</div>
+                  <div class="badge-cloud">
+                    <span class="badge-pill">B.Sc Engineering</span>
+                    <span class="badge-pill">9th &amp; 10th Sciences</span>
+                    <span class="badge-pill">In-Home &amp; Online</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4-Column Metric Grid on Desktop, 2x2 on Mobile -->
+              <div class="metric-grid">
+                <div class="metric-item">
+                  <div class="metric-val">10+ Yrs</div>
+                  <div class="metric-label">Experience</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">480+</div>
+                  <div class="metric-label">Students</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">Kohinoor/Canal</div>
+                  <div class="metric-label">Location</div>
+                </div>
+                <div class="metric-item">
+                  <div class="metric-val">94.5%</div>
+                  <div class="metric-label">A-Grade</div>
+                </div>
+              </div>
+
+              <p class="bio-text">
+                Specialist in breaking down complex Physics numerical problems and Chemistry reaction equations. Equips students with cut-marker paper presentation techniques, formula proof layouts, and accurate labeled diagrams that secure maximum marks from board examiners.
+              </p>
+            </div>
+
+            <div class="btn-center-wrap">
+              <button type="button" onclick="selectFaculty('Engr. Hamza Farooq', '10th Class / SSC-II', 'In-Home Visit (Male Tutor)')" class="btn btn-terracotta btn-sm">
+                Book Trial With Engr. Hamza
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 10: INTERACTIVE SMART BOOKING FORM (2-COL DESKTOP)
+         ========================================================================== -->
+    <section id="book-now" class="section-wrap booking-section-wrap">
+      <div class="container">
+        <div class="booking-box">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <span class="section-tag">Direct Coordinator Routing</span>
+            <h2 class="section-title">Schedule Your Free Diagnostic Trial Class</h2>
+            <p class="section-subtitle">
+              Fill in your child's academic details below. Our Academic Coordinator will verify tutor availability in your neighborhood and confirm your trial slot via WhatsApp.
+            </p>
+          </div>
+
+          <form id="trialBookingForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-grid">
+              
+              <!-- Input 1: Parent's Name -->
+              <div class="form-group">
+                <label for="parentName" class="form-label">Parent or Guardian's Full Name *</label>
+                <input type="text" id="parentName" class="form-input" placeholder="e.g. Mian Tariq Mahmood" required>
+              </div>
+
+              <!-- Input 2: WhatsApp Contact Number -->
+              <div class="form-group">
+                <label for="whatsappNumber" class="form-label">WhatsApp Contact Number *</label>
+                <input type="tel" id="whatsappNumber" class="form-input" placeholder="0330 0737350" required>
+              </div>
+
+              <!-- Input 3: Student's Class/Grade -->
+              <div class="form-group">
+                <label for="studentClass" class="form-label">Student's Current Class / Grade *</label>
+                <select id="studentClass" class="form-select" required>
+                  <option value="" disabled selected>Select Student Class</option>
+                  <option value="Class 1–5 Primary">Class 1–5 Primary (Foundation &amp; Homework)</option>
+                  <option value="Class 6–8 Middle School">Class 6–8 Middle School (Pre-Matric Preparation)</option>
+                  <option value="9th Class / SSC-I">9th Class / SSC-I (Board Candidate)</option>
+                  <option value="10th Class / SSC-II">10th Class / SSC-II (Matric Final Exam Sprint)</option>
+                </select>
+              </div>
+
+              <!-- Input 4: Board / Curriculum -->
+              <div class="form-group">
+                <label for="boardCurriculum" class="form-label">Board / Educational System *</label>
+                <select id="boardCurriculum" class="form-select" required>
+                  <option value="" disabled selected>Select Examination Board</option>
+                  <option value="BISE Faisalabad Board">BISE Faisalabad Board</option>
+                  <option value="Punjab Board (Lahore / Multan / Rawalpindi / Gujranwala)">Other Punjab Boards (Lahore, Multan, RWP)</option>
+                  <option value="Federal Board (FBISE Islamabad)">Federal Board (FBISE Islamabad)</option>
+                  <option value="Single National Curriculum (SNC) School System">Single National Curriculum (SNC Primary/Middle)</option>
+                </select>
+              </div>
+
+              <!-- Input 5: Subjects Needed -->
+              <div class="form-group">
+                <label for="subjectsNeeded" class="form-label">Subject(s) Needed *</label>
+                <select id="subjectsNeeded" class="form-select" required>
+                  <option value="" disabled selected>Select Required Subject</option>
+                  <option value="All Primary Subjects (English, Urdu, Maths, Science, Islamiat)">All Primary Subjects (Class 1–5 Package)</option>
+                  <option value="Mathematics">Mathematics (General or Science Group)</option>
+                  <option value="General Science / Science Group">General Science / Core Science</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Biology">Biology</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="English Grammar & Composition">English Grammar &amp; Composition</option>
+                  <option value="Complete Science Group (Maths, Physics, Chem, Bio/CS)">Full Science Group Package (Matric)</option>
+                </select>
+              </div>
+
+              <!-- Input 6: Preferred Tuition Method -->
+              <div class="form-group">
+                <label for="tuitionMethod" class="form-label">Preferred Tuition Method &amp; Teacher Gender *</label>
+                <select id="tuitionMethod" class="form-select" required>
+                  <option value="" disabled selected>Select Preferred Method</option>
+                  <option value="In-Home Visit (Female Tutor)">In-Home Visit (Female Tutor)</option>
+                  <option value="In-Home Visit (Male Tutor)">In-Home Visit (Male Tutor)</option>
+                  <option value="Tutor's Home Studio (Student travels to tutor)">Tutor's Home Studio (Student visits tutor)</option>
+                  <option value="Online 1-on-1 (Interactive Live Video Class)">Online 1-on-1 (Interactive Tablet &amp; Zoom)</option>
+                </select>
+              </div>
+
+              <!-- Input 7: Area / Location in Faisalabad -->
+              <div class="form-group">
+                <label for="locationArea" class="form-label">Location / Residential Colony in Faisalabad *</label>
+                <select id="locationArea" class="form-select" required>
+                  <option value="" disabled selected>Select Your Area</option>
+                  <option value="Peoples Colony No. 1 or No. 2">Peoples Colony (No. 1 &amp; No. 2)</option>
+                  <option value="Madina Town / Susan Road">Madina Town / Susan Road</option>
+                  <option value="Kohinoor City / D Ground">Kohinoor City / D Ground</option>
+                  <option value="Canal Road / Eden Valley / Citi Housing / Green Town">Canal Road &amp; Housing Societies (Eden Valley, Citi Housing)</option>
+                  <option value="Ghulam Muhammad Abad">Ghulam Muhammad Abad</option>
+                  <option value="Samanabad / Satiana Road">Samanabad / Satiana Road</option>
+                  <option value="Millat Town / Sargodha Road">Millat Town / Sargodha Road</option>
+                  <option value="Jinnah Colony / FDA City">Jinnah Colony / FDA City</option>
+                  <option value="Other Area in Faisalabad / Punjab / Online">Other Area in Faisalabad / Online Punjab</option>
+                </select>
+              </div>
+
+              <!-- Input 8: Preferred Day / Timing Slot -->
+              <div class="form-group">
+                <label for="timeSlot" class="form-label">Preferred Day &amp; Timing Slot *</label>
+                <input type="text" id="timeSlot" class="form-input" placeholder="e.g. Daily 4:00 PM – 6:00 PM or Weekends" required>
+              </div>
+
+            </div>
+
+            <div class="btn-center-wrap" style="margin-top: 2rem;">
+              <button type="submit" class="btn btn-terracotta" style="padding: 1rem 2.5rem; font-size: 1.05rem;">
+                Confirm &amp; Book Free Trial via WhatsApp
+              </button>
+            </div>
+            
+            <p class="form-security-note">
+              🔒 <strong>Family Privacy Assured:</strong> Your contact number is used solely by our academic coordinator to arrange your trial class. We never share family numbers with third parties.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 11: FREQUENTLY ASKED QUESTIONS (ACCORDION)
+         ========================================================================== -->
+    <section class="section-wrap">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Common Inquiries</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Clear, transparent answers regarding tutor vetting, security for home visits, female faculty availability, and our free trial policy.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          
+          <!-- Q1 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>How do you verify and screen home tutors for family safety?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Every tutor in our network undergoes an exhaustive multi-stage verification process before being assigned to any household. We verify original CNIC identity cards, obtain police character certificates, physically inspect their degree transcripts (from recognized institutions such as UAF, GCUF, Punjab University, or NUST), and confirm verified residential addresses. You can welcome our tutors into your home with complete peace of mind.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Do you provide female home tutors for daughters and young kids?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, absolutely. We have a dedicated roster of highly qualified, compassionate female educators specializing in primary school (Class 1–5), middle school (Class 6–8), and Matriculation sciences for female students. Our female tutors are actively available for home visits across Peoples Colony, Madina Town, Kohinoor City, Canal Road, and surrounding residential communities in Faisalabad.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Can a tutor help my 9th/10th class child if their pre-board/send-up marks are low?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Our specialized Matric mentors routinely execute 30-to-60 day high-yield turnaround sprints for students struggling in school send-ups. By conducting diagnostic past paper audits, eliminating arithmetic/theorem errors, and training the student on 605/604 cut-marker board presentation guidelines, our mentors rapidly recover 25 to 40 lost marks across Science and Mathematics subjects.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Is the diagnostic trial class truly free?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, 100% free with zero deposit and no obligation. The initial 60-minute session allows you to evaluate the tutor's teaching methodology, subject grasp, and communication rapport with your child firsthand. If you are thoroughly satisfied, you can proceed with a regular monthly tuition schedule; if not, you owe nothing.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION 12: FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-wrap" style="margin-bottom: 1rem;">
+            <div class="brand-crest" style="border-color: #cbd5e1;">F</div>
+            <div class="brand-info">
+              <span class="brand-name" style="color: #ffffff;">FAISALABAD TUTORS</span>
+              <span class="brand-badge" style="color: #94a3b8;">Punjab Board &amp; Matric Specialists</span>
+            </div>
+          </div>
+          <p style="text-align: justify; text-justify: inter-word; font-size: 0.82rem; line-height: 1.6; color: #94a3b8;">
+            Faisalabad's premier network of background-screened in-home and interactive online tutors. Dedicated to building foundational study habits for Class 1–8 and delivering top board results for 9th &amp; 10th Matric candidates.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Faisalabad Areas Covered</h5>
+          <ul class="footer-links">
+            <li><a href="#book-now">Peoples Colony (No. 1 &amp; No. 2)</a></li>
+            <li><a href="#book-now">Madina Town &amp; Susan Road</a></li>
+            <li><a href="#book-now">Kohinoor City &amp; D Ground</a></li>
+            <li><a href="#book-now">Canal Road (Eden Valley, Citi Housing)</a></li>
+            <li><a href="#book-now">Samanabad, Millat Town, Jinnah Colony</a></li>
+            <li><a href="#book-now">Online Live Classes (Punjab-Wide)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Direct Contact &amp; Support</h5>
+          <ul class="footer-links">
+            <li><strong>Official WhatsApp:</strong> +92 330 0737350</li>
+            <li><strong>Direct Helpline:</strong> 0330 0737350</li>
+            <li><strong>Coordinator Hours:</strong> Mon – Sun: 8:00 AM – 10:00 PM</li>
+            <li><strong>Coverage:</strong> In-Home Visits &amp; Online Classes</li>
+            <li><a href="#book-now" style="color: var(--color-terracotta); font-weight: 700;">→ Book Free Diagnostic Trial</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Faisalabad Tutors Network. All Rights Reserved. Serving families across Peoples Colony, Madina Town, Kohinoor, Canal Road, and Faisalabad.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SECTION 13: SMART MOBILE ACTION DOCK (< 1024PX ONLY)
+       ========================================================================== -->
+  <aside class="mobile-sticky-dock" aria-label="Quick Mobile Actions">
+    <a href="javascript:void(0)" onclick="openWhatsAppChat('Assalam o Alaikum, I would like to book a Free In-Home / Online Trial Class for my child in Faisalabad.')" class="dock-btn btn-whatsapp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#book-now" class="dock-btn btn-terracotta">
+      <span>Book Free Trial</span>
+    </a>
+  </aside>
+
+  <!-- ==========================================================================
+       SECTION 14: JAVASCRIPT AUTOMATION LOGIC (VANILLA JS)
+       ========================================================================== -->
+  <script>
+    const OFFICIAL_WHATSAPP_NUMBER = "923300737350";
+
+    /**
+     * 1. Smooth FAQ Accordion Toggle
+     */
+    function toggleFaq(buttonElement) {
+      const faqItem = buttonElement.closest('.faq-item');
+      const isOpen = faqItem.classList.contains('open');
+
+      // Close all other open items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('open');
+        const btn = item.querySelector('.faq-question');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        faqItem.classList.add('open');
+        buttonElement.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    /**
+     * 2. Direct 1-Tap WhatsApp Consultation
+     */
+    function openWhatsAppChat(customMessage) {
+      const encodedMsg = encodeURIComponent(customMessage);
+      const url = `https://wa.me/${OFFICIAL_WHATSAPP_NUMBER}?text=${encodedMsg}`;
+      window.open(url, '_blank');
+    }
+
+    /**
+     * 3. Faculty Selection Handler (Auto-scrolls & pre-populates form)
+     */
+    function selectFaculty(tutorName, defaultClass, defaultMethod) {
+      const classSelect = document.getElementById('studentClass');
+      const methodSelect = document.getElementById('tuitionMethod');
+      const timeSlotInput = document.getElementById('timeSlot');
+
+      if (classSelect) {
+        for (let i = 0; i < classSelect.options.length; i++) {
+          if (classSelect.options[i].value === defaultClass || classSelect.options[i].text.includes(defaultClass)) {
+            classSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      if (methodSelect) {
+        for (let i = 0; i < methodSelect.options.length; i++) {
+          if (methodSelect.options[i].value === defaultMethod) {
+            methodSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      if (timeSlotInput) {
+        timeSlotInput.value = `Requesting tutor: ${tutorName} (Evenings / After School)`;
+      }
+
+      const bookSection = document.getElementById('book-now');
+      if (bookSection) {
+        bookSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    /**
+     * 4. Smart Booking Form Interceptor & Formatted WhatsApp Compiler
+     */
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const parentName = document.getElementById('parentName').value.trim();
+      const whatsappNumber = document.getElementById('whatsappNumber').value.trim();
+      const studentClass = document.getElementById('studentClass').value;
+      const boardCurriculum = document.getElementById('boardCurriculum').value;
+      const subjectsNeeded = document.getElementById('subjectsNeeded').value;
+      const tuitionMethod = document.getElementById('tuitionMethod').value;
+      const locationArea = document.getElementById('locationArea').value;
+      const timeSlot = document.getElementById('timeSlot').value.trim();
+
+      if (!parentName || !whatsappNumber || !studentClass || !boardCurriculum || !subjectsNeeded || !tuitionMethod || !locationArea || !timeSlot) {
+        alert('Please fill out all required fields so we can allocate the best-suited tutor.');
+        return;
+      }
+
+      // Construct pristine multi-line message matching the requested structure
+      const messageLines = [
+        "Salam! I would like to book a Free Trial Class:",
+        `• Parent Name: ${parentName}`,
+        `• Student Class: ${studentClass}`,
+        `• Board: ${boardCurriculum}`,
+        `• Subject(s): ${subjectsNeeded}`,
+        `• Tuition Method: ${tuitionMethod}`,
+        `• Location in Faisalabad: ${locationArea}`,
+        `• Preferred Slot: ${timeSlot}`,
+        `• WhatsApp Contact: ${whatsappNumber}`
+      ];
+
+      const fullMessage = messageLines.join("\n");
+      const encodedMessage = encodeURIComponent(fullMessage);
+      const whatsappUrl = `https://wa.me/${OFFICIAL_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
+
