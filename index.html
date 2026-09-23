@@ -13,8 +13,10 @@
     :root {
       --color-navy: #0b1e36;
       --color-navy-dark: #071324;
-      --color-terracotta: #bf573f;
-      --color-terracotta-hover: #9e442c;
+      --color-primary: #1d4ed8; /* Professional Academic Blue */
+      --color-primary-hover: #1e40af;
+      --color-primary-light: #eff6ff;
+      --color-primary-border: #bfdbfe;
       --color-whatsapp: #25d366;
       --color-whatsapp-hover: #1ebd5a;
       --color-alert-red: #b91c1c;
@@ -26,10 +28,10 @@
       --color-surface-subtle: #f8fafc;
 
       --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      --shadow-sm: 0 1px 3px rgba(11, 30, 54, 0.06), 0 1px 2px rgba(11, 30, 54, 0.04);
-      --shadow-md: 0 4px 12px rgba(11, 30, 54, 0.08), 0 2px 4px rgba(11, 30, 54, 0.04);
-      --shadow-lg: 0 12px 28px rgba(11, 30, 54, 0.12), 0 4px 8px rgba(11, 30, 54, 0.06);
-      --shadow-hover: 0 16px 36px rgba(11, 30, 54, 0.16);
+      --shadow-sm: 0 1px 3px rgba(11, 30, 54, 0.05), 0 1px 2px rgba(11, 30, 54, 0.03);
+      --shadow-md: 0 4px 14px rgba(11, 30, 54, 0.07), 0 2px 5px rgba(11, 30, 54, 0.04);
+      --shadow-lg: 0 12px 30px rgba(11, 30, 54, 0.1), 0 4px 10px rgba(11, 30, 54, 0.05);
+      --shadow-hover: 0 16px 36px rgba(29, 78, 216, 0.12), 0 4px 12px rgba(11, 30, 54, 0.08);
 
       --radius-sm: 6px;
       --radius-md: 10px;
@@ -46,21 +48,23 @@
     html {
       scroll-behavior: smooth;
       font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Academic Coordinate Graph Paper Background */
+    /* Subtle Modern Education-Themed Texture Background */
     body {
       font-family: var(--font-stack);
       color: #1e293b;
-      line-height: 1.6;
+      line-height: 1.65;
       background-color: #f8fafc;
+      /* Refined academic subtle texture with micro-geometry and soft ambient graduation */
       background-image: 
-        linear-gradient(rgba(11, 30, 54, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(11, 30, 54, 0.04) 1px, transparent 1px),
-        linear-gradient(rgba(11, 30, 54, 0.09) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(11, 30, 54, 0.09) 1px, transparent 1px);
-      background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
-      background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+        radial-gradient(circle at 50% 50%, rgba(29, 78, 216, 0.04) 1px, transparent 1px),
+        radial-gradient(circle at 0% 0%, rgba(11, 30, 54, 0.03) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(239, 246, 255, 0.4) 0%, rgba(248, 250, 252, 0.95) 100%);
+      background-size: 28px 28px, 56px 56px, 100% 100%;
+      background-attachment: fixed;
       padding-bottom: 74px; /* Space for mobile sticky action dock */
     }
 
@@ -70,7 +74,7 @@
       }
     }
 
-    /* Strict Formatting Enforcements */
+    /* Strict Formatting Enforcements with Balanced Typography & Fixed Spacing */
     p.body-text, 
     .card-body,
     .bio-text,
@@ -78,6 +82,24 @@
     .step-desc {
       text-align: justify;
       text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      word-spacing: normal;
+      letter-spacing: -0.01em;
+      line-height: 1.68;
+      text-wrap: pretty;
+    }
+
+    @media (max-width: 480px) {
+      p.body-text, 
+      .card-body,
+      .bio-text,
+      .faq-answer p,
+      .step-desc {
+        letter-spacing: -0.012em;
+        line-height: 1.6;
+      }
     }
 
     .btn-center-wrap {
@@ -136,9 +158,9 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--color-terracotta);
-      background-color: rgba(191, 87, 63, 0.08);
-      border: 1px solid rgba(191, 87, 63, 0.2);
+      color: var(--color-primary);
+      background-color: rgba(29, 78, 216, 0.08);
+      border: 1px solid rgba(29, 78, 216, 0.2);
       padding: 0.35rem 0.85rem;
       border-radius: var(--radius-pill);
       margin-bottom: 0.75rem;
@@ -150,6 +172,7 @@
       color: var(--color-navy);
       line-height: 1.25;
       margin-bottom: 0.75rem;
+      letter-spacing: -0.015em;
     }
 
     @media (min-width: 1024px) {
@@ -163,7 +186,7 @@
       color: var(--color-slate);
       max-width: 720px;
       margin: 0 auto;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* Universal Buttons */
@@ -184,13 +207,13 @@
       text-align: center;
     }
 
-    .btn-terracotta {
-      background-color: var(--color-terracotta);
+    .btn-primary {
+      background-color: var(--color-primary);
       color: #ffffff;
     }
 
-    .btn-terracotta:hover {
-      background-color: var(--color-terracotta-hover);
+    .btn-primary:hover {
+      background-color: var(--color-primary-hover);
       transform: translateY(-1px);
       box-shadow: var(--shadow-md);
     }
@@ -218,7 +241,7 @@
     }
 
     .btn-sm {
-      padding: 0.55rem 1.1rem;
+      padding: 0.55rem 1.15rem;
       font-size: 0.85rem;
     }
 
@@ -229,7 +252,7 @@
       border-radius: var(--radius-lg);
       padding: 1.75rem;
       box-shadow: var(--shadow-md);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
 
     .white-card:hover {
@@ -254,7 +277,7 @@
     }
 
     .top-contact-bar a {
-      color: #38bdf8;
+      color: #60a5fa;
       text-decoration: none;
       font-weight: 700;
     }
@@ -301,7 +324,7 @@
       justify-content: center;
       font-weight: 900;
       font-size: 1.25rem;
-      border: 1.5px solid var(--color-terracotta);
+      border: 1.5px solid var(--color-primary);
     }
 
     .brand-info {
@@ -319,7 +342,7 @@
     .brand-badge {
       font-size: 0.7rem;
       font-weight: 700;
-      color: var(--color-terracotta);
+      color: var(--color-primary);
       letter-spacing: 0.02em;
     }
 
@@ -357,8 +380,9 @@
     }
 
     .geo-pill.primary {
-      background: rgba(11, 30, 54, 0.06);
-      border-color: var(--color-navy);
+      background: rgba(29, 78, 216, 0.07);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
       font-weight: 700;
     }
 
@@ -387,8 +411,6 @@
       font-size: 1.05rem;
       color: #334155;
       margin-bottom: 1.75rem;
-      text-align: justify;
-      text-justify: inter-word;
     }
 
     .countdown-card {
@@ -428,7 +450,7 @@
       position: absolute;
       top: -12px;
       right: 24px;
-      background: var(--color-terracotta);
+      background: var(--color-primary);
       color: #ffffff;
       font-size: 0.72rem;
       font-weight: 800;
@@ -449,8 +471,6 @@
       font-size: 0.9rem;
       color: var(--color-slate);
       margin-bottom: 1.5rem;
-      text-align: justify;
-      text-justify: inter-word;
     }
 
     .benefit-checklist {
@@ -514,8 +534,8 @@
       text-transform: uppercase;
       padding: 0.25rem 0.65rem;
       border-radius: var(--radius-pill);
-      background: rgba(11, 30, 54, 0.08);
-      color: var(--color-navy);
+      background: rgba(29, 78, 216, 0.08);
+      color: var(--color-primary);
       margin-bottom: 0.75rem;
     }
 
@@ -575,8 +595,8 @@
       text-transform: uppercase;
       padding: 0.25rem 0.65rem;
       border-radius: var(--radius-pill);
-      background: rgba(191, 87, 63, 0.1);
-      color: var(--color-terracotta);
+      background: rgba(29, 78, 216, 0.08);
+      color: var(--color-primary);
       margin-bottom: 0.75rem;
     }
 
@@ -720,7 +740,7 @@
     .trial-time {
       font-size: 1.6rem;
       font-weight: 900;
-      color: #f59e0b;
+      color: #60a5fa;
       margin-bottom: 0.5rem;
     }
 
@@ -734,12 +754,10 @@
     .trial-col p {
       font-size: 0.9rem;
       color: #cbd5e1;
-      text-align: justify;
-      text-justify: inter-word;
     }
 
     /* ==========================================================================
-       SECTION 9: VERIFIED FACULTY SHOWCASE (MULTIPLE TEACHERS)
+       SECTION 9: MEET OUR VERIFIED SPECIALIST FACULTY
        ========================================================================== */
     .faculty-grid {
       display: grid;
@@ -773,7 +791,7 @@
       min-width: 94px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid var(--color-terracotta);
+      border: 3px solid var(--color-primary);
       background-color: #f1f5f9;
       box-shadow: var(--shadow-sm);
     }
@@ -799,7 +817,7 @@
     .faculty-role {
       font-size: 0.82rem;
       font-weight: 700;
-      color: var(--color-terracotta);
+      color: var(--color-primary);
       margin-top: 0.15rem;
       margin-bottom: 0.45rem;
     }
@@ -921,8 +939,8 @@
 
     .form-input:focus, .form-select:focus {
       outline: none;
-      border-color: var(--color-terracotta);
-      box-shadow: 0 0 0 3px rgba(191, 87, 63, 0.15);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
     }
 
     .form-security-note {
@@ -976,7 +994,7 @@
       font-size: 1.25rem;
       line-height: 1;
       transition: transform 0.3s ease;
-      color: var(--color-terracotta);
+      color: var(--color-primary);
     }
 
     .faq-item.open .faq-chevron {
@@ -999,7 +1017,6 @@
     .faq-answer p {
       font-size: 0.925rem;
       color: #334155;
-      line-height: 1.6;
     }
 
     /* ==========================================================================
@@ -1103,7 +1120,7 @@
        SECTION 1: TOP BAR
        ========================================================================== -->
   <aside class="top-contact-bar" role="complementary" aria-label="Official Contact Information">
-    <span>📞 Call / WhatsApp: <a href="https://wa.me/923300737350" target="_blank">+92 330 0737350</a> &nbsp;|&nbsp; <strong>Trusted In-Home &amp; Online Tutors in Faisalabad</strong></span>
+    <span>📞 Call / WhatsApp: <a href="https://wa.me/923000000000" target="_blank">+92 300 0000000</a> &nbsp;|&nbsp; <strong>Trusted In-Home &amp; Online Tutors in Faisalabad</strong></span>
   </aside>
 
   <!-- ==========================================================================
@@ -1120,7 +1137,7 @@
       </a>
       
       <div class="header-actions">
-        <a href="#book-now" class="btn btn-terracotta btn-sm">Book Free Trial</a>
+        <a href="#book-now" class="btn btn-primary btn-sm">Book Tutor</a>
       </div>
     </div>
   </header>
@@ -1154,7 +1171,7 @@
             </div>
           </div>
 
-          <p class="hero-lead">
+          <p class="hero-lead body-text">
             Whether your child needs attentive, patient female tutoring for primary school homework or rigorous, past-paper driven coaching for BISE Faisalabad 9th and 10th Matric exams, we dispatch background-verified subject specialists straight to your doorstep across Faisalabad.
           </p>
         </div>
@@ -1164,7 +1181,7 @@
           <div class="hero-action-panel">
             <span class="panel-badge">100% Free • Zero Obligation</span>
             <h2 class="action-panel-title">Book a Free Diagnostic Trial</h2>
-            <p class="action-panel-desc">
+            <p class="action-panel-desc body-text">
               Experience our teacher's methodology firsthand. We evaluate your child's syllabus gaps and prepare a personalized grade-enhancement roadmap before you pay a single rupee.
             </p>
 
@@ -1184,8 +1201,8 @@
             </ul>
 
             <div class="btn-center-wrap" style="flex-direction: column; gap: 0.75rem;">
-              <a href="#book-now" class="btn btn-terracotta" style="width: 100%;">
-                Request In-Home Free Trial
+              <a href="#book-now" class="btn btn-primary" style="width: 100%;">
+                Book Tutor
               </a>
               <a href="javascript:void(0)" onclick="openWhatsAppChat('Assalam o Alaikum, I would like to book a Free Diagnostic Trial Class for my child in Faisalabad.')" class="btn btn-whatsapp" style="width: 100%;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
@@ -1227,7 +1244,7 @@
               </ul>
             </div>
             <div class="btn-center-wrap">
-              <a href="#book-now" class="btn btn-terracotta btn-sm">Book Primary Tutor</a>
+              <a href="#book-now" class="btn btn-primary btn-sm">Book Primary Tutor</a>
             </div>
           </article>
 
@@ -1246,7 +1263,7 @@
               </ul>
             </div>
             <div class="btn-center-wrap">
-              <a href="#book-now" class="btn btn-outline-navy btn-sm">Book Middle Tutor</a>
+              <a href="#book-now" class="btn btn-outline-navy btn-sm">Book Middle School Tutor</a>
             </div>
           </article>
 
@@ -1265,7 +1282,7 @@
               </ul>
             </div>
             <div class="btn-center-wrap">
-              <a href="#book-now" class="btn btn-terracotta btn-sm">Book Matric Specialist</a>
+              <a href="#book-now" class="btn btn-primary btn-sm">Book Matric Specialist Tutor</a>
             </div>
           </article>
         </div>
@@ -1301,7 +1318,7 @@
               </ul>
             </div>
             <div class="btn-center-wrap">
-              <a href="#book-now" class="btn btn-terracotta btn-sm">Request In-Home Tutor</a>
+              <a href="#book-now" class="btn btn-primary btn-sm">Book In-Home Tutor</a>
             </div>
           </article>
 
@@ -1320,7 +1337,7 @@
               </ul>
             </div>
             <div class="btn-center-wrap">
-              <a href="#book-now" class="btn btn-outline-navy btn-sm">Explore Studio Option</a>
+              <a href="#book-now" class="btn btn-outline-navy btn-sm">Book Studio Tutor</a>
             </div>
           </article>
 
@@ -1339,7 +1356,7 @@
               </ul>
             </div>
             <div class="btn-center-wrap">
-              <a href="#book-now" class="btn btn-outline-navy btn-sm">Try Online Class</a>
+              <a href="#book-now" class="btn btn-outline-navy btn-sm">Book Online Tutor</a>
             </div>
           </article>
         </div>
@@ -1388,8 +1405,8 @@
     </section>
 
     <!-- ==========================================================================
-         SECTION 7: THE 3-STEP BOARD SUCCESS SYSTEM
-         ========================================================================== -->
+       SECTION 7: THE 3-STEP BOARD SUCCESS SYSTEM
+       ========================================================================== -->
     <section class="section-wrap">
       <div class="container">
         <div class="section-header">
@@ -1427,7 +1444,7 @@
         </div>
 
         <div class="btn-center-wrap">
-          <a href="#book-now" class="btn btn-terracotta">Claim Your Child's Free Diagnostic Audit</a>
+          <a href="#book-now" class="btn btn-primary">Book Diagnostic Session</a>
         </div>
       </div>
     </section>
@@ -1439,13 +1456,13 @@
       <div class="container">
         <div class="trial-box">
           <div style="text-align: center; max-width: 720px; margin: 0 auto;">
-            <span style="color: #f59e0b; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;">
+            <span style="color: #60a5fa; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;">
               Zero-Risk Parent Assurance
             </span>
             <h2 style="font-size: 2rem; font-weight: 800; margin: 0.5rem 0 1rem 0; line-height: 1.25;">
               What Truly Happens in Your Free 60-Minute Trial Class
             </h2>
-            <p style="color: #cbd5e1; font-size: 0.95rem; text-align: justify; text-justify: inter-word;">
+            <p style="color: #cbd5e1; font-size: 0.95rem;" class="body-text">
               We eliminate all uncertainty. Experience our instructor's teaching methodology, student rapport, and personalized assessment plan before making any financial commitment.
             </p>
           </div>
@@ -1454,7 +1471,7 @@
             <div class="trial-col">
               <div class="trial-time">40 Mins</div>
               <h4>Student Skill Diagnostic</h4>
-              <p>
+              <p class="body-text">
                 The tutor conducts an encouraging, low-stress evaluation on challenging textbook concepts and past questions to pinpoint foundational weaknesses and exam anxieties.
               </p>
             </div>
@@ -1462,7 +1479,7 @@
             <div class="trial-col">
               <div class="trial-time">15 Mins</div>
               <h4>Honest Parent Consultation</h4>
-              <p>
+              <p class="body-text">
                 The tutor meets with parents to discuss exact conceptual gaps, realistic target grade trajectories for board exams, and recommended weekly contact hours.
               </p>
             </div>
@@ -1470,7 +1487,7 @@
             <div class="trial-col">
               <div class="trial-time">05 Mins</div>
               <h4>Custom Study Roadmap</h4>
-              <p>
+              <p class="body-text">
                 You receive a clear, week-by-week syllabus revision schedule tailored to your child's upcoming school send-ups or board exam dates with zero obligation to continue.
               </p>
             </div>
@@ -1478,7 +1495,7 @@
 
           <div class="btn-center-wrap">
             <a href="#book-now" class="btn btn-whatsapp" style="padding: 0.95rem 2.2rem; font-size: 1rem;">
-              Book Your 60-Min In-Home Diagnostic Now
+              Book Trial Tutor
             </a>
           </div>
         </div>
@@ -1510,7 +1527,7 @@
                     <circle cx="47" cy="38" r="18" fill="#fed7aa"/>
                     <path d="M20 84C20 66 32 60 47 60C62 60 74 66 74 84" fill="#fed7aa"/>
                     <circle cx="47" cy="35" r="13" fill="#fde68a"/>
-                    <path d="M30 25C30 25 47 15 64 25C64 25 60 44 47 44C34 44 30 25 30 25Z" fill="#1e3a8a"/>
+                    <path d="M30 25C30 25 47 15 64 25C64 25 60 44 47 44C34 44 30 25 30 25Z" fill="#1d4ed8"/>
                   </svg>
                 </div>
                 <div class="faculty-meta">
@@ -1550,8 +1567,8 @@
             </div>
 
             <div class="btn-center-wrap">
-              <button type="button" onclick="selectFaculty('Ustada Sadia Noreen', 'Primary / Middle (Class 1–8)', 'In-Home Visit (Female Tutor)')" class="btn btn-terracotta btn-sm">
-                Book Trial With Ustada Sadia
+              <button type="button" onclick="selectFaculty('Ustada Sadia Noreen', 'Class 1–5 Primary', 'In-Home Visit (Female Tutor)')" class="btn btn-primary btn-sm">
+                Book Tutor: Ustada Sadia
               </button>
             </div>
           </article>
@@ -1566,7 +1583,7 @@
                     <circle cx="47" cy="38" r="18" fill="#e2e8f0"/>
                     <path d="M20 84C20 66 32 60 47 60C62 60 74 66 74 84" fill="#e2e8f0"/>
                     <circle cx="47" cy="35" r="13" fill="#cbd5e1"/>
-                    <rect x="36" y="32" width="22" height="4" rx="2" fill="#0b1e36"/>
+                    <rect x="36" y="32" width="22" height="4" rx="2" fill="#1d4ed8"/>
                   </svg>
                 </div>
                 <div class="faculty-meta">
@@ -1606,8 +1623,8 @@
             </div>
 
             <div class="btn-center-wrap">
-              <button type="button" onclick="selectFaculty('Sir Muhammad Rizwan', '9th Class / SSC-I', 'In-Home Visit (Male Tutor)')" class="btn btn-terracotta btn-sm">
-                Book Trial With Sir Rizwan
+              <button type="button" onclick="selectFaculty('Sir Muhammad Rizwan', '9th Class / SSC-I', 'In-Home Visit (Male Tutor)')" class="btn btn-primary btn-sm">
+                Book Tutor: Sir Rizwan
               </button>
             </div>
           </article>
@@ -1622,7 +1639,7 @@
                     <circle cx="47" cy="38" r="18" fill="#f8fafc"/>
                     <path d="M20 84C20 66 32 60 47 60C62 60 74 66 74 84" fill="#f8fafc"/>
                     <circle cx="47" cy="35" r="13" fill="#cbd5e1"/>
-                    <path d="M38 33C38 33 42 38 47 38C52 38 56 33 56 33" stroke="#0b1e36" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M38 33C38 33 42 38 47 38C52 38 56 33 56 33" stroke="#1d4ed8" stroke-width="2.5" stroke-linecap="round"/>
                   </svg>
                 </div>
                 <div class="faculty-meta">
@@ -1662,8 +1679,8 @@
             </div>
 
             <div class="btn-center-wrap">
-              <button type="button" onclick="selectFaculty('Engr. Hamza Farooq', '10th Class / SSC-II', 'In-Home Visit (Male Tutor)')" class="btn btn-terracotta btn-sm">
-                Book Trial With Engr. Hamza
+              <button type="button" onclick="selectFaculty('Engr. Hamza Farooq', '10th Class / SSC-II', 'In-Home Visit (Male Tutor)')" class="btn btn-primary btn-sm">
+                Book Tutor: Engr. Hamza
               </button>
             </div>
           </article>
@@ -1692,13 +1709,13 @@
               <!-- Input 1: Parent's Name -->
               <div class="form-group">
                 <label for="parentName" class="form-label">Parent or Guardian's Full Name *</label>
-                <input type="text" id="parentName" class="form-input" placeholder="e.g. Mian Tariq Mahmood" required>
+                <input type="text" id="parentName" class="form-input" placeholder="e.g. Parent / Guardian Name" required>
               </div>
 
               <!-- Input 2: WhatsApp Contact Number -->
               <div class="form-group">
                 <label for="whatsappNumber" class="form-label">WhatsApp Contact Number *</label>
-                <input type="tel" id="whatsappNumber" class="form-input" placeholder="0330 0737350" required>
+                <input type="tel" id="whatsappNumber" class="form-input" placeholder="0300 0000000" required>
               </div>
 
               <!-- Input 3: Student's Class/Grade -->
@@ -1772,16 +1789,16 @@
               </div>
 
               <!-- Input 8: Preferred Day / Timing Slot -->
-              <div class="form-group">
+              <div class="form-group form-col-full">
                 <label for="timeSlot" class="form-label">Preferred Day &amp; Timing Slot *</label>
-                <input type="text" id="timeSlot" class="form-input" placeholder="e.g. Daily 4:00 PM – 6:00 PM or Weekends" required>
+                <input type="text" id="timeSlot" class="form-input" placeholder="e.g. Mon–Fri 4:00 PM – 6:00 PM or Weekends" required>
               </div>
 
             </div>
 
             <div class="btn-center-wrap" style="margin-top: 2rem;">
-              <button type="submit" class="btn btn-terracotta" style="padding: 1rem 2.5rem; font-size: 1.05rem;">
-                Confirm &amp; Book Free Trial via WhatsApp
+              <button type="submit" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.05rem;">
+                Book Tutor via WhatsApp
               </button>
             </div>
             
@@ -1879,7 +1896,7 @@
               <span class="brand-badge" style="color: #94a3b8;">Punjab Board &amp; Matric Specialists</span>
             </div>
           </div>
-          <p style="text-align: justify; text-justify: inter-word; font-size: 0.82rem; line-height: 1.6; color: #94a3b8;">
+          <p class="body-text" style="font-size: 0.82rem; line-height: 1.6; color: #94a3b8;">
             Faisalabad's premier network of background-screened in-home and interactive online tutors. Dedicated to building foundational study habits for Class 1–8 and delivering top board results for 9th &amp; 10th Matric candidates.
           </p>
         </div>
@@ -1899,11 +1916,11 @@
         <div class="footer-col">
           <h5>Direct Contact &amp; Support</h5>
           <ul class="footer-links">
-            <li><strong>Official WhatsApp:</strong> +92 330 0737350</li>
-            <li><strong>Direct Helpline:</strong> 0330 0737350</li>
+            <li><strong>Official WhatsApp:</strong> +92 300 0000000</li>
+            <li><strong>Direct Helpline:</strong> 0300 0000000</li>
             <li><strong>Coordinator Hours:</strong> Mon – Sun: 8:00 AM – 10:00 PM</li>
             <li><strong>Coverage:</strong> In-Home Visits &amp; Online Classes</li>
-            <li><a href="#book-now" style="color: var(--color-terracotta); font-weight: 700;">→ Book Free Diagnostic Trial</a></li>
+            <li><a href="#book-now" style="color: var(--color-primary); font-weight: 700;">→ Book Tutor</a></li>
           </ul>
         </div>
       </div>
@@ -1919,11 +1936,11 @@
        ========================================================================== -->
   <aside class="mobile-sticky-dock" aria-label="Quick Mobile Actions">
     <a href="javascript:void(0)" onclick="openWhatsAppChat('Assalam o Alaikum, I would like to book a Free In-Home / Online Trial Class for my child in Faisalabad.')" class="dock-btn btn-whatsapp">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.00187 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
       <span>WhatsApp</span>
     </a>
-    <a href="#book-now" class="dock-btn btn-terracotta">
-      <span>Book Free Trial</span>
+    <a href="#book-now" class="dock-btn btn-primary">
+      <span>Book Tutor</span>
     </a>
   </aside>
 
@@ -1931,7 +1948,7 @@
        SECTION 14: JAVASCRIPT AUTOMATION LOGIC (VANILLA JS)
        ========================================================================== -->
   <script>
-    const OFFICIAL_WHATSAPP_NUMBER = "923300737350";
+    const OFFICIAL_WHATSAPP_NUMBER = "923000000000";
 
     /**
      * 1. Smooth FAQ Accordion Toggle
@@ -2013,31 +2030,4 @@
       const locationArea = document.getElementById('locationArea').value;
       const timeSlot = document.getElementById('timeSlot').value.trim();
 
-      if (!parentName || !whatsappNumber || !studentClass || !boardCurriculum || !subjectsNeeded || !tuitionMethod || !locationArea || !timeSlot) {
-        alert('Please fill out all required fields so we can allocate the best-suited tutor.');
-        return;
-      }
-
-      // Construct pristine multi-line message matching the requested structure
-      const messageLines = [
-        "Salam! I would like to book a Free Trial Class:",
-        `• Parent Name: ${parentName}`,
-        `• Student Class: ${studentClass}`,
-        `• Board: ${boardCurriculum}`,
-        `• Subject(s): ${subjectsNeeded}`,
-        `• Tuition Method: ${tuitionMethod}`,
-        `• Location in Faisalabad: ${locationArea}`,
-        `• Preferred Slot: ${timeSlot}`,
-        `• WhatsApp Contact: ${whatsappNumber}`
-      ];
-
-      const fullMessage = messageLines.join("\n");
-      const encodedMessage = encodeURIComponent(fullMessage);
-      const whatsappUrl = `https://wa.me/${OFFICIAL_WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-      window.open(whatsappUrl, '_blank');
-    }
-  </script>
-</body>
-</html>
-
+      if (!parentName || !whatsappNumber || !studentClass || !boardCurriculum || !subjectsNeeded || !tuitionMethod ||
